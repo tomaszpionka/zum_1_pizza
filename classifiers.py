@@ -27,6 +27,7 @@ reference_labels = [
 
 
 def pizza_classifier(speech_string: str):
+    result = None
     translator = Translator(to_lang='en', from_lang='pl')
     translation = str(translator.translate(speech_string))
     classifier = pipeline('zero-shot-classification')
